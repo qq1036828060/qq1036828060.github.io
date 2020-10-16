@@ -6099,7 +6099,7 @@ button.botui-actions-buttons-button {
 }.live2d-tool {
     position:fixed;
     bottom:0;
-    left:0;
+    left:17px;
     width:auto;
     height:auto;
     z-index:100;
@@ -6112,7 +6112,7 @@ button.botui-actions-buttons-button {
     .live2d-tool {
     border-radius:0 5px 5px 0;
     width:35px;
-    left:-17px;
+    left:17px;
     color:white;
     font-size:13px;
     padding:5px 0;
@@ -6137,7 +6137,7 @@ button.botui-actions-buttons-button {
 }@media screen and (-webkit-min-device-pixel-ratio:0) {
     .isWebKit .live2d-tool {
     position:fixed;
-    left:0;
+    left:17px;
     width:auto;
     height:auto;
     z-index:100;
@@ -6171,7 +6171,7 @@ button.botui-actions-buttons-button {
 @supports(-ms-ime-align:auto) {
     .live2d-tool {
     margin-left:0;
-    left:-17px;
+    left:17px;
     transition-property:left,bottom
 }
 .live2d-tool:hover {

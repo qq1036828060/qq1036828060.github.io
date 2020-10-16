@@ -5,7 +5,7 @@
   <script type="text/javascript" src="js/love.js"></script>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Server | 枯木</title>
+  <title itemprop="name">Js_02 | 枯木</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -260,11 +260,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Server.jpg);" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_04.jpg" data-src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Server.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_02.jpg);" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_04.jpg" data-src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_02.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Server</h1>
+      Js_02</h1>
       <p class="entry-census">
         <span>
           <a href="">
@@ -276,7 +276,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-9-30<span class="bull">
+        2020-10-14<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -290,88 +290,125 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="1-软件工程"><a href="#1-软件工程" class="headerlink" title="1. 软件工程"></a>1. 软件工程</h2><ol>
-<li><p>程序设计</p>
-<p>Ada - bug - debug</p>
-</li>
-<li><p>软件设计</p>
-<p>IBM - Dos - Microsoft - Bill Gates - Windows</p>
-</li>
-<li><p>软件工程</p>
-<p>给定成本、进度的前提下，开发出具有有效性，可维护，可追踪，可复用，可移植的软件产品。</p>
-</li>
-</ol>
-<h2 id="2-软件的生命周期-软件开发流程"><a href="#2-软件的生命周期-软件开发流程" class="headerlink" title="2. 软件的生命周期(软件开发流程)"></a>2. 软件的生命周期(软件开发流程)</h2><p>俗称 三个周期八个阶段</p>
+          <h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>表达式：由数据或者由运算符连接的操作数据组成的形式</p>
+<p>运算符分为算术运算符、比较运算符、逻辑运算符、位运算符、赋值运算符、三目运算符</p>
 <ol>
-<li><p>软件定义期</p>
+<li><p>算术运算符</p>
+<p><strong>+      -      *      /      %      ++      –</strong></p>
+<p> % 取余</p>
+<p> ++ 自增，在原来基础之上加1</p>
+<p> – 自减，在原来基础之上减1</p>
+<p> <strong>自增和自减前置和后置单独使用没有区别，只有赋值才会有区别</strong></p>
+<pre><code class="js">var a=1;
+var b=a++;//先把a的值赋给b，然后a再执行自增
+var c=2;
+var d=++c;//先让c的值执行自增，然后将自增的结果赋给d
+</code></pre>
+</li>
+<li><p>比较运算符</p>
+<p><strong>&lt;    &gt;    =    &lt;=    &gt;=    ==(等于)    !=(不等于)    ===(全等于)    !==(不全等于)</strong></p>
+<p> == 等于，比较值是否相同</p>
+<p> === 全等于，先比较类型，再比较值</p>
+<font color="red">NaN=NaN     //false</font>
+
+<font color="red">NaN=和任何值比较都是false</font>
+</li>
+<li><p>逻辑运算符</p>
+<p>&amp;&amp; 并且（逻辑与），关联的两个条件都是true，结果是true，否则是false</p>
+<p>||  或者（逻辑或），关联的两个条件至少有一个为true，结果是true，否则false</p>
+<p>!  逻辑非，取反</p>
+<p><strong>短路逻辑</strong>：</p>
+<p>&amp;&amp;  当第一个条件为false，不再执行第二个条件</p>
+<p>||  当第一个条件为true，不再执行第二个条件</p>
+</li>
+<li><p>位运算符</p>
 <ol>
-<li><p>可行性研究阶段</p>
-<p>技术，人力，资金，设备，时间，回报率，政策，风俗。。。</p>
-</li>
-<li><p>需求分析阶段、</p>
-<p>分为功能性需求分析和非功能性需求分析</p>
-<p>非功能性需求对功能性需求的实现方式</p>
-</li>
+<li>按位与（&amp;）上下位都是1，结果是1，否则是0</li>
+<li>按位或（|）上下位含有1，结果是1，否则是0</li>
+<li>按位异或（^）上下位不同为1，相同为0</li>
+<li>按位右移（&gt;&gt;）删除二进制的最后一位或者多位，每次缩小到原来的一半或者更多</li>
+<li>按位左移（&lt;&lt;）在二进制的最后添加0，成倍增加</li>
 </ol>
 </li>
-<li><p>软件的开发期</p>
-<ol start="3">
-<li><p>概要设计阶段——架构师</p>
-<p>子模型，系统，技术选型，数据库设计</p>
+<li><p>赋值运算符</p>
+<p><strong>=    +=    -=    *=    /=    %=…</strong></p>
+<p>计算赋值：先执行计算，再执行赋值</p>
 </li>
-<li><p>详细设计阶段——模块负责人</p>
-<p>页面，主题内容，属性，功能、</p>
-</li>
-<li><p>编码实现阶段</p>
-<p>U I设计——网页的效果图</p>
-<p>前端工程师——将网页效果转换为 html，css，js格式的文件</p>
-<p>后端工程师——为前端提供项目的数据</p>
-</li>
-<li><p>测试阶段——测试工程师</p>
+<li><p>三目运算符</p>
+<p>一目运算符：由一个运算符连接了一个操作数据或者表达式  ++  –  !</p>
+<p>二目运算符：由一个运算符连接了两个操作数据或者表达式</p>
+<p>三目运算符：由两个运算符连接了三个操作数据或者表达式</p>
 </li>
 </ol>
+<h2 id="浏览器端函数"><a href="#浏览器端函数" class="headerlink" title="浏览器端函数"></a>浏览器端函数</h2><pre><code> alert() 弹出警示框
+
+ prompt() 弹出提示(输入)框，需要使用变量保存用户输入的值，类型是字符串型；如果点击取消返回null
+</code></pre><h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><ol>
+<li><p>if语句</p>
+<pre><code class="js">if(条件表达式){
+   语句块
+}
+</code></pre>
 </li>
-<li><p>软件维护期</p>
-<ol start="7">
-<li><p>部署阶段——运维工程师</p>
-<p>将软件部署到服务器</p>
+<li><p>if-else语句</p>
+<pre><code class="js">if(条件表达式){
+  语句块1
+}else{
+  语句块2
+}
+</code></pre>
 </li>
-<li><p>维护阶段</p>
+<li><p>if-else嵌套</p>
+<pre><code class="js">if(条件表达式1){
+  语句块1
+}else if(条件表达式2){
+  语句块2
+}else{
+  语句块n    //以上所有的条件都是false
+}
+</code></pre>
+</li>
+<li><p>switch-case语句</p>
+<pre><code class="js">switch(表达式){
+  case 值1:  //会将表达式和值1比较
+   语句块1
+   break; //结束，跳出switch-case语句
+  case 值2:
+   语句块2
+   break;
+</code></pre>
 </li>
 </ol>
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><p>​    循环是一遍又一遍执行相同或者相似的内容</p>
+<p>​    循环的两个要素</p>
+<p>​    循环条件：可以控制循环的次数</p>
+<p>​    循环体：要重复执行的相同或者相似内容</p>
+<ol>
+<li><p>while循环</p>
+<pre><code class="js">while(循环条件){
+  循环体
+}
+</code></pre>
+</li>
+<li><p>break</p>
+<p>在循环体中执行后，就会跳出循环。</p>
+</li>
+<li><p>do-while循环</p>
+<pre><code class="js">do{
+  循环体
+}while(循环条件);
+</code></pre>
+</li>
+<li><p>for循环</p>
+<pre><code class="js">for(初始值; 循环条件; 增量){
+  循环体
+}
+</code></pre>
+</li>
+<li><p>循环嵌套</p>
+<p>在一个循环体的内部，还有其它的循环；任意两个循环之间可以相互嵌套</p>
 </li>
 </ol>
-<h2 id="3-学子商城功能性需求分析"><a href="#3-学子商城功能性需求分析" class="headerlink" title="3. 学子商城功能性需求分析"></a>3. 学子商城功能性需求分析</h2><p>​    前台子系统：<a href="http://www.codeboy.com:9999/" target="_blank" rel="noopener">http://www.codeboy.com:9999/</a></p>
-<p>​    后台子系统：<a href="http://www.codeboy.com:9999/admin/login.html" target="_blank" rel="noopener">http://www.codeboy.com:9999/admin/login.html</a></p>
-<table>
-<thead>
-<tr>
-<th>前台子系统：商品模块（首页，列表，查询）用户模块（注册，登陆，用户中心，收藏）购物车模块（添加，修改，删除，确认订单）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>后台子系统：商品模块（添加，修改，删除，检索）用户模块（列表，删除，检索）订单模块（列表，减速，修改）</td>
-</tr>
-<tr>
-<td>移动子系统：商品模块（首页，列表，查询）用户模块（注册，登陆，用户中心，收藏）购物车模块（添加，修改，删除，确认订单）</td>
-</tr>
-</tbody>
-</table>
-<h2 id="4-项目中的服务器"><a href="#4-项目中的服务器" class="headerlink" title="4. 项目中的服务器"></a>4. 项目中的服务器</h2><p>​    硬件：就是一台功能强大的计算机</p>
-<p>​    软件：可以提供各种服务，例如WEB服务，数据库服务，游戏服务，文件服务</p>
-<p>访问服务器</p>
-<p>​    <strong>域名/IP</strong>：找服务器</p>
-<p>​    <strong>端口</strong>：服务器下的每一个服务器都有对应的端口</p>
-<p>​    <strong>协议</strong>：客户端要使用服务需要对应的协议</p>
-<h2 id="5-后记"><a href="#5-后记" class="headerlink" title="5. 后记"></a>5. 后记</h2><p>FTP服务器(文件下载)</p>
-<p>地址： <a href="http://code.tarena.com.cn" target="_blank" rel="noopener">http://code.tarena.com.cn</a></p>
-<p>用户名：tarenacode</p>
-<p>密码：code_2013</p>
-<p>软件安装下载</p>
-<p>链接：<a href="https://pan.baidu.com/s/1xL02vqb_XnLZoZzyjTRNKQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1xL02vqb_XnLZoZzyjTRNKQ</a> </p>
-<p>提取码：a94v</p>
-<p>单词地址：<a href="http://www.codece.com/" target="_blank" rel="noopener">http://www.codece.com/</a></p>
 
         </div>
         <!-- .entry-content -->
@@ -402,22 +439,39 @@
       <section class="post-squares nextprev">
         
           
-            <div class="post-nepre full previous">
+            <div class="post-nepre half previous">
           
-            <a href="/2020/10/09/Mysql_01/" rel="prev">
+            <a href="/2020/10/15/Js_03/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_04.jpg" data-src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Mysql_01.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Mysql_01.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_04.jpg" data-src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_03.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_03.jpg">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                Mysql_01</h3>
+                Js_03</h3>
                 <hr>
               </div>
             </a>
           </div>
         
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/10/13/Js_01/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_04.jpg" data-src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_01.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_01.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Js_01</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
         
       </section>
       

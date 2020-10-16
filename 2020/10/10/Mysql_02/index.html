@@ -5,7 +5,7 @@
   <script type="text/javascript" src="js/love.js"></script>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Server | 枯木</title>
+  <title itemprop="name">Mysql_02 | 枯木</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -260,11 +260,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Server.jpg);" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_04.jpg" data-src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Server.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Mysql_02.jpg);" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_04.jpg" data-src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Mysql_02.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      Server</h1>
+      Mysql_02</h1>
       <p class="entry-census">
         <span>
           <a href="">
@@ -276,7 +276,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-9-30<span class="bull">
+        2020-10-10<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -290,88 +290,95 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h2 id="1-软件工程"><a href="#1-软件工程" class="headerlink" title="1. 软件工程"></a>1. 软件工程</h2><ol>
-<li><p>程序设计</p>
-<p>Ada - bug - debug</p>
+          <h2 id="1-计算机如何存储字符"><a href="#1-计算机如何存储字符" class="headerlink" title="1. 计算机如何存储字符"></a>1. 计算机如何存储字符</h2><ol>
+<li><p>如何存储英文字符</p>
+<p>ASCII: 对英文符号和字母进行编码，总共有128个</p>
+<p>Latin-1: 对欧洲字符进行了编码，总共有256个，兼容ASCII（MySQL默认使用这种编码）</p>
 </li>
-<li><p>软件设计</p>
-<p>IBM - Dos - Microsoft - Bill Gates - Windows</p>
+<li><p>如何存储中文字符</p>
+<p>GB2312: 对常用的6千多汉字进行了编码，兼容ASCII</p>
+<p>GBK: 对两万多汉字进行了编码，兼容GB2312</p>
+<p>Unicode： 对世界上主流国家常用的语言进行了编码，具体存储方案分为utf-8，utf-16，utf-32，兼容ASCII。</p>
 </li>
-<li><p>软件工程</p>
-<p>给定成本、进度的前提下，开发出具有有效性，可维护，可追踪，可复用，可移植的软件产品。</p>
+<li><p>解决mysql中文乱码</p>
+<p>脚本文件另存为的编码为utf-8</p>
+<p>客户端连接服务器端的编码为utf-8  (set names utf8;)</p>
+<p>服务器端创建数据库使用的编码为uft-8 ( charset=utf8 )</p>
 </li>
 </ol>
-<h2 id="2-软件的生命周期-软件开发流程"><a href="#2-软件的生命周期-软件开发流程" class="headerlink" title="2. 软件的生命周期(软件开发流程)"></a>2. 软件的生命周期(软件开发流程)</h2><p>俗称 三个周期八个阶段</p>
+<h2 id="2-列类型"><a href="#2-列类型" class="headerlink" title="2. 列类型"></a>2. 列类型</h2><p>在创建数据表的时候，指定的列可以存储的数据类型</p>
+<pre><code class="mysql">create  table  表名(
+    nid  列类型
+);
+</code></pre>
 <ol>
-<li><p>软件定义期</p>
+<li><p>数值型——引号可以省略</p>
+<ul>
+<li>tinyint  微整型，占1个字节，范围-128~127</li>
+<li>smallint 小整型，占2个字节，范围-32768~32767</li>
+<li>int  整型，占4个字节，范围-2147483648~2147483647</li>
+<li>bigint 大整型，占8个字节</li>
+<li>float  单精度浮点型，占4个字节，最大是3.4e38，精度会受影响，比int大的多</li>
+<li>double  双精度浮点型，占8个字节，精度会受影响，比bigint大的多</li>
+<li>decimal(M,D)  定点小数，小数不会发生变化，M代表总的有效位数，D代表小数点后的有效位数</li>
+<li>boolean/bool 布尔型，有两个特殊的值，分别是true（真）和false（假），通常用于存储只有两个结果的数据；真正使用的时候boolean转为tinyint， true变为1，false变为0；</li>
+</ul>
+<p>注：如果使用true和false，属于关键字，不能加引号。插入数据的时候推荐直接使用1或者0</p>
+</li>
+<li><p>日期时间型——必须加引号</p>
+<ul>
+<li>date  日期型  格式2020-10-09</li>
+<li>time  时间型  格式15:14:30</li>
+<li>datetime  日期时间型  格式2020-10-09 15:14:30</li>
+</ul>
+</li>
+<li><p>字符串型——必须加引号</p>
+<ul>
+<li>varchar(M)  变长字符串，几乎不会产生空间浪费，操作速度相对慢，M的最大值是65535,常用于存储变化长度的数据，例如文章的标题，内容…</li>
+<li>char(M)  定长字符串，可能产生空间浪费，操作速度相对快，M的最大值是255，常用于存储固定长度的数据，例如身份证号，手机号码…</li>
+<li>text(M)  大型变长字符串， M的最大值是2G</li>
+</ul>
+</li>
+</ol>
+<h2 id="3-列约束"><a href="#3-列约束" class="headerlink" title="3. 列约束"></a>3. 列约束</h2><p>MySQL可以对要插入的数据进行特定的验证，只有符合条件才允许插入，否则认为是非法的插入</p>
+<pre><code class="mysql"> create table  表名(
+   列名  列类型  列约束
+);
+</code></pre>
 <ol>
-<li><p>可行性研究阶段</p>
-<p>技术，人力，资金，设备，时间，回报率，政策，风俗。。。</p>
+<li><p>主键约束——primary key</p>
+<p>声明了主键约束的列上不允许插入重复的值，一个表中只能有一个主键约束，通常是加在编号列，会加快数据的查找速度</p>
+<p>注：主键约束的列禁止插入null</p>
 </li>
-<li><p>需求分析阶段、</p>
-<p>分为功能性需求分析和非功能性需求分析</p>
-<p>非功能性需求对功能性需求的实现方式</p>
+<li><p>非空约束——not null</p>
+<p>声明了非空约束的列上不允许插入null</p>
 </li>
-</ol>
+<li><p>唯一约束——unique</p>
+<p>声明了唯一约束的列上不允许出现重复的值，允许插入null，甚至多个null，可能会影响到默认的排序</p>
 </li>
-<li><p>软件的开发期</p>
-<ol start="3">
-<li><p>概要设计阶段——架构师</p>
-<p>子模型，系统，技术选型，数据库设计</p>
+<li><p>默认值约束——default</p>
+<p>可以使用default关键字设置默认值，具体有两种应用方式</p>
+<p> insert into laptop values( 1,’小米Air’,default,…. );</p>
+<p> 使用default关键字获取默认值</p>
+<p> insert into laptop(lid,title) values(2,’thinkpad’);  </p>
+<p> 没有出现的列会自动使用默认值。</p>
 </li>
-<li><p>详细设计阶段——模块负责人</p>
-<p>页面，主题内容，属性，功能、</p>
+<li><p>检查约束——check</p>
+<p>mysql可以对插入的数据进行自定义的验证</p>
+<pre><code class="mysql">create  table  student(
+    score  tinyint  check(score&gt;=0 and score&lt;=100)
+);
+</code></pre>
+<p>注：mysql不支持检查约束，认为会影响数据的插入速度，对服务器造成较大的压力（由JS代替）</p>
 </li>
-<li><p>编码实现阶段</p>
-<p>U I设计——网页的效果图</p>
-<p>前端工程师——将网页效果转换为 html，css，js格式的文件</p>
-<p>后端工程师——为前端提供项目的数据</p>
-</li>
-<li><p>测试阶段——测试工程师</p>
-</li>
-</ol>
-</li>
-<li><p>软件维护期</p>
-<ol start="7">
-<li><p>部署阶段——运维工程师</p>
-<p>将软件部署到服务器</p>
-</li>
-<li><p>维护阶段</p>
+<li><p>外键约束</p>
+<p>声明了外键约束的列会到另一个表的<strong>主键列</strong>取值，允许使用null，一个表中可以有多个外键约束。</p>
+<p>注：外键约束对应的必须是主键列。外键约束列和对应的主键列，列类型要保持一致</p>
 </li>
 </ol>
-</li>
-</ol>
-<h2 id="3-学子商城功能性需求分析"><a href="#3-学子商城功能性需求分析" class="headerlink" title="3. 学子商城功能性需求分析"></a>3. 学子商城功能性需求分析</h2><p>​    前台子系统：<a href="http://www.codeboy.com:9999/" target="_blank" rel="noopener">http://www.codeboy.com:9999/</a></p>
-<p>​    后台子系统：<a href="http://www.codeboy.com:9999/admin/login.html" target="_blank" rel="noopener">http://www.codeboy.com:9999/admin/login.html</a></p>
-<table>
-<thead>
-<tr>
-<th>前台子系统：商品模块（首页，列表，查询）用户模块（注册，登陆，用户中心，收藏）购物车模块（添加，修改，删除，确认订单）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>后台子系统：商品模块（添加，修改，删除，检索）用户模块（列表，删除，检索）订单模块（列表，减速，修改）</td>
-</tr>
-<tr>
-<td>移动子系统：商品模块（首页，列表，查询）用户模块（注册，登陆，用户中心，收藏）购物车模块（添加，修改，删除，确认订单）</td>
-</tr>
-</tbody>
-</table>
-<h2 id="4-项目中的服务器"><a href="#4-项目中的服务器" class="headerlink" title="4. 项目中的服务器"></a>4. 项目中的服务器</h2><p>​    硬件：就是一台功能强大的计算机</p>
-<p>​    软件：可以提供各种服务，例如WEB服务，数据库服务，游戏服务，文件服务</p>
-<p>访问服务器</p>
-<p>​    <strong>域名/IP</strong>：找服务器</p>
-<p>​    <strong>端口</strong>：服务器下的每一个服务器都有对应的端口</p>
-<p>​    <strong>协议</strong>：客户端要使用服务需要对应的协议</p>
-<h2 id="5-后记"><a href="#5-后记" class="headerlink" title="5. 后记"></a>5. 后记</h2><p>FTP服务器(文件下载)</p>
-<p>地址： <a href="http://code.tarena.com.cn" target="_blank" rel="noopener">http://code.tarena.com.cn</a></p>
-<p>用户名：tarenacode</p>
-<p>密码：code_2013</p>
-<p>软件安装下载</p>
-<p>链接：<a href="https://pan.baidu.com/s/1xL02vqb_XnLZoZzyjTRNKQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1xL02vqb_XnLZoZzyjTRNKQ</a> </p>
-<p>提取码：a94v</p>
-<p>单词地址：<a href="http://www.codece.com/" target="_blank" rel="noopener">http://www.codece.com/</a></p>
+<h2 id="4-自增列"><a href="#4-自增列" class="headerlink" title="4. 自增列"></a>4. 自增列</h2><p>auto_increment ，自动增长，会获取当前的最大值然后加1插入</p>
+<p>注：自增列必须和主键列一起使用。自增列必须是整数形式的列上</p>
+<p>如果要实现自增只需要赋值为null，允许手动赋值</p>
 
         </div>
         <!-- .entry-content -->
@@ -402,14 +409,32 @@
       <section class="post-squares nextprev">
         
           
-            <div class="post-nepre full previous">
+            <div class="post-nepre half previous">
           
-            <a href="/2020/10/09/Mysql_01/" rel="prev">
+            <a href="/2020/10/12/Mysql_03/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_04.jpg" data-src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Mysql_03.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Mysql_03.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Mysql_03</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/10/09/Mysql_01/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Js_04.jpg" data-src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Mysql_01.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/qq1036828060/cdn@latest/img/cover/Mysql_01.jpg">
               </div>
               <span class="label">
-              Previous Post</span>
+              Next Post</span>
               <div class="info">
                 <h3>
                 Mysql_01</h3>
@@ -417,7 +442,6 @@
               </div>
             </a>
           </div>
-        
         
       </section>
       
