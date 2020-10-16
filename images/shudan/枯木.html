@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:4000/ -->
+<html lang="zh-CN" class="windows desktop landscape"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="generator" content="Hexo 3.9.0">
+  
+  <script type="text/javascript" src="./枯木_files/love.js.下载"></script><style type="text/css">.heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}</style>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">枯木</title>
+  
+    <link rel="shortcut icon" href="http://localhost:4000/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="./枯木_files/css" media="all">
+  <link rel="dns-prefetch" href="http://cdn.jsdelivr.net/">
+  <link rel="stylesheet" id="saukra_css-css" href="./枯木_files/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="./枯木_files/lib.min.css" media="all">
+  <link rel="stylesheet" href="./枯木_files/font.css" media="all">
+  <link rel="stylesheet" href="./枯木_files/insight.css" media="all">
+  <link rel="stylesheet" href="./枯木_files/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="./枯木_files/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="./枯木_files/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "清晨の雨天";
+  mashiro_option.author_name = "清晨の雨天";
+  mashiro_option.site_url = "https://zzgweb.xyz";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "images/banner/banner1.jpeg,images/banner/banner2.jpeg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+<style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><style type="text/css">.v *{-webkit-box-sizing:border-box;box-sizing:border-box;line-height:2;color:#555;-webkit-transition:all .3s ease;transition:all .3s ease}.v hr{margin:.825rem 0;border-color:#f6f6f6;border-style:dashed}.v.hide-avatar .vimg{display:none}.v a{position:relative;cursor:pointer;color:#1abc9c;display:inline-block}.v a:before{content:"";position:absolute;width:0;right:0;bottom:0;height:1px;background:#1abc9c;-webkit-transition:width .3s ease;transition:width .3s ease}.v a:hover{color:#d7191a}.v a:hover:before{width:100%;left:0;right:auto}.v code,.v pre{background-color:#f6f6f6;color:#555;padding:.2em .4em;border-radius:3px;font-size:85%;margin:0;font-family:Source Code Pro,courier new,Input Mono,PT Mono,SFMono-Regular,Consolas,Monaco,Menlo,PingFang SC,Liberation Mono,Microsoft YaHei,Courier，monospace}.v pre{padding:10px;overflow:auto;line-height:1.45}.v pre code{padding:0;background:transparent;white-space:pre-wrap;word-break:keep-all}.v blockquote{color:#666;margin:.5rem 0;padding:0 0 0 1rem;border-left:8px solid hsla(0,0%,93%,.5)}.v .vinput{border:none;resize:none;outline:none;padding:10px 5px;max-width:100%;font-size:.775rem}.v input[type=checkbox],.v input[type=radio]{display:inline-block;vertical-align:middle;margin-top:-2px}.v .vwrap{border:1px solid #f0f0f0;border-radius:4px;margin-bottom:10px;overflow:hidden;position:relative;padding:10px}.v .vwrap input{background:transparent}.v .vwrap .vedit{position:relative;padding-top:10px}.v .vwrap .vedit .vctrl{text-align:right;font-size:12px}.v .vwrap .vedit .vctrl span{padding:10px;display:inline-block;vertical-align:middle;cursor:pointer}.v .vwrap .vedit .vemojis{display:none;font-size:18px;text-align:justify;max-height:145px;overflow:auto;margin-bottom:10px;-webkit-box-shadow:0 0 1px #f0f0f0;box-shadow:0 0 1px #f0f0f0}.v .vwrap .vedit .vemojis i{font-style:normal;padding:7px 0;width:38px;cursor:pointer;text-align:center;display:inline-block;vertical-align:middle}.v .vwrap .vedit .vpreview{padding:7px;-webkit-box-shadow:0 0 1px #f0f0f0;box-shadow:0 0 1px #f0f0f0}.v .vwrap .vedit .vpreview frame,.v .vwrap .vedit .vpreview iframe,.v .vwrap .vedit .vpreview img{max-width:100%;border:none}.v .vwrap .vheader .vinput{width:33.33%;border-bottom:1px dashed #dedede}.v .vwrap .vheader.item2 .vinput{width:50%}.v .vwrap .vheader.item1 .vinput{width:100%}.v .vwrap .vheader .vinput:focus{border-bottom-color:#eb5055}@media screen and (max-width:520px){.v .vwrap .vheader.item2 .vinput,.v .vwrap .vheader .vinput{width:100%}}.v .vwrap .vcontrol{font-size:0;padding-top:15px}.v .vwrap .vcontrol .col{display:inline-block;font-size:.725rem;vertical-align:middle;color:#ccc}.v .vwrap .vcontrol .col.text-right{text-align:right}.v .vwrap .vcontrol .col svg{margin-right:2px;overflow:hidden;fill:currentColor;vertical-align:middle}.v .vwrap .vcontrol .col.col-20{width:20%}.v .vwrap .vcontrol .col.col-40{width:40%}.v .vwrap .vcontrol .col.col-60{width:60%}.v .vwrap .vcontrol .col.col-80{width:80%}.v .vwrap .vcontrol .col.split{width:50%}.v .vwrap .vmark{position:absolute;background:rgba(0,0,0,.65);width:100%;height:100%;left:0;top:0}.v .vwrap .vmark .valert{padding-top:3rem}.v .vwrap .vmark .valert .vtext{color:#fff;padding:1rem 0}.v .vwrap .vmark .valert .vcode{width:4.6875rem;border-radius:.3125rem;padding:.5rem;background:#dedede}.v .vwrap .vmark .valert .vcode:focus{border-color:#3090e4;background-color:#fff}@media screen and (max-width:720px){.v .vwrap .vmark .valert{padding-top:5.5rem}.v .vwrap .vmark .valert .vtext{color:#fff;padding:1rem 0}}.v .power{color:#999;padding:.5rem 0}.v .power,.v .power a{font-size:.75rem}.v .vinfo{font-size:0;padding:5px}.v .vinfo .col{font-size:.875rem;display:inline-block;width:50%;vertical-align:middle}.v .vinfo .vcount .vnum{font-weight:600;font-size:1.25rem}.v a{text-decoration:none;color:#555}.v a:hover{color:#222}.v ol,.v ul{padding:0;margin-left:1.25rem}.v .txt-center{text-align:center}.v .txt-right{text-align:right}.v .pd5{padding:5px}.v .pd10{padding:10px}.v .veditor{width:100%;min-height:8.75rem;font-size:.875rem;background:transparent;resize:vertical;-webkit-transition:all .25s ease;transition:all .25s ease}.v .vbtn{-webkit-transition-duration:.4s;transition-duration:.4s;text-align:center;color:#313131;border:1px solid #ededed;border-radius:.3rem;display:inline-block;background:#ededed;margin-bottom:0;font-weight:400;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;white-space:nowrap;padding:.5rem 1.25rem;font-size:.875rem;line-height:1.42857143;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;outline:none}.v .vbtn+.vbtn{margin-left:1.25rem}.v .vbtn:active,.v .vbtn:hover{color:#3090e4;border-color:#3090e4;background-color:#fff}.v .vempty{padding:1.25rem;text-align:center;color:#999}.v .vlist{width:100%}.v .vlist .vcard{padding-top:1.5rem;position:relative;display:block}.v .vlist .vcard:after{content:"";clear:both;display:block}.v .vlist .vcard .vimg{width:3.125rem;height:3.125rem;float:left;border-radius:50%;margin-right:.7525rem;border:1px solid #f5f5f5;padding:.125rem}@media screen and (max-width:720px){.v .vlist .vcard .vimg{width:2.5rem;height:2.5rem}}.v .vlist .vcard .vhead{line-height:1.5;margin-top:0}.v .vlist .vcard .vhead .vnick{position:relative;font-size:.875rem;font-weight:500;margin-right:.875rem;cursor:pointer;color:#1abc9c;text-decoration:none;display:inline-block}.v .vlist .vcard .vhead .vnick:before{content:"";position:absolute;width:0;right:0;bottom:0;height:1px;background:#1abc9c;-webkit-transition:width .3s ease;transition:width .3s ease}.v .vlist .vcard .vhead .vnick:hover{color:#d7191a}.v .vlist .vcard .vhead .vnick:hover:before{width:100%;left:0;right:auto}.v .vlist .vcard .vhead .vsys{display:inline-block;padding:.2rem .5rem;background:#ededed;color:#b3b1b1;font-size:.75rem;border-radius:.2rem;margin-right:.3rem}@media screen and (max-width:520px){.v .vlist .vcard .vhead .vsys{display:none}}.v .vlist .vcard .vh{overflow:hidden;padding-bottom:.5rem;border-bottom:1px dashed #f5f5f5}.v .vlist .vcard .vh .vtime{color:#b3b3b3;font-size:.75rem;margin-right:.875rem}.v .vlist .vcard .vh .vmeta{line-height:1;position:relative}.v .vlist .vcard .vh .vmeta .vat{font-size:.8125rem;color:#ef2f11;cursor:pointer;float:right}.v .vlist .vcard .vcontent{word-wrap:break-word;word-break:break-all;text-align:justify;color:#4a4a4a;font-size:.875rem;line-height:2;position:relative;margin-bottom:.75rem;padding-top:.625rem}.v .vlist .vcard .vcontent frame,.v .vlist .vcard .vcontent iframe,.v .vlist .vcard .vcontent img{max-width:100%;border:none}.v .vlist .vcard .vcontent.expand{cursor:pointer;max-height:11.25rem;overflow:hidden}.v .vlist .vcard .vcontent.expand:before{display:block;content:"";position:absolute;width:100%;left:0;top:0;bottom:3.15rem;pointer-events:none;background:-webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,100%,0)),to(hsla(0,0%,100%,.9)));background:linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.9))}.v .vlist .vcard .vcontent.expand:after{display:block;content:"Click on expand";text-align:center;color:#828586;position:absolute;width:100%;height:3.15rem;line-height:3.15rem;left:0;bottom:0;pointer-events:none;background:hsla(0,0%,100%,.9)}.v .vlist .vcard .vquote{color:#666;margin-top:1rem;padding-left:1rem;border-left:1px dashed hsla(0,0%,93%,.5)}.v .vlist .vcard .vquote .vimg{width:2.225rem;height:2.225rem}.v .vpage .vmore{margin:1rem 0}.v .clear{content:"";display:block;clear:both}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@-webkit-keyframes pulse{50%{background:#dcdcdc}}@keyframes pulse{50%{background:#dcdcdc}}.v .vloading{position:relative;padding:20px;display:block;height:80px}.v .vloading:before{-webkit-box-sizing:border-box;box-sizing:border-box;content:"";position:absolute;display:inline-block;top:20px;left:50%;margin-left:-20px;width:40px;height:40px;border:6px double #a0a0a0;border-top-color:transparent;border-bottom-color:transparent;border-radius:50%;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}</style><script type="text/javascript" defer="" src="./枯木_files/busuanzi"></script><script type="text/javascript" charset="utf-8" async="" src="./枯木_files/L2Dwidget.0.min.js.下载"></script>
+<style>
+  .live2d-widget-dialog-container {
+    width: 300px;
+    height: 120px;
+    position: absolute;
+    bottom: 65%;
+    right: 0px;
+    transform-origin: right;
+    padding: 12px;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+  .live2d-widget-dialog {
+    width: 100%;
+    height: 100%;
+    color: #917159;
+    font-size: 16px;
+    padding: 12px;
+    border: 2px solid rgb(236, 203, 180);
+    background: rgb(252, 248, 244);
+    box-sizing: border-box;
+    border-radius: 10px;
+    transform: rotate(-2deg);
+    opacity: 0;
+    transition: 200ms opacity;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    animation: live2d-widget-dialog-tingle 4s ease-in-out 0s infinite alternate;
+  }
+  @keyframes live2d-widget-dialog-tingle {
+    0% { transform: translate(-1px, 1.5px) rotate(-2deg); }
+    100% { transform: translate(1px, -1.5px) rotate(2deg); }
+  }
+</style>
+</head>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+
+  <div class="scrollbar" id="bar" style="width: 53%; background: orange;">
+  </div>
+  <div class="heart"></div>
+  <a href="http://localhost:4000/#" class="cd-top faa-float animated cd-is-visible" style="top: -589px;"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot" style="height: auto;">
+  <div id="banner_wave_1" style="left: -643.574px;"></div>
+  <div id="banner_wave_2" style="left: -592.418px;"></div>
+  <figure id="centerbg" class="centerbg" style="background-image: url(&quot;images/banner/banner2.jpeg&quot;); height: 361px;">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://zzgweb.xyz/">
+          <img src="./枯木_files/touxiang.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>偷得浮生半日闲</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="./枯木_files/next-b.svg">
+          </li>
+          
+            
+              
+                <li class="QQ">
+                  <a href="tencent://message/?uin=1036828060">
+                    <img src="./枯木_files/QQ.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="./枯木_files/QQ(1).png">
+                  </div>
+                </li>
+              
+            
+              
+                <li class="QQ">
+                  <a href="http://localhost:4000/#">
+                    <img src="./枯木_files/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="./枯木_files/wechat(1).png">
+                  </div>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://space.bilibili.com/15282888" target="_blank" class="bilibili" title="bilibili">
+                    <img src="./枯木_files/bilibili.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://weibo.com/mashirozx?is_all=1" target="_blank" class="wangyiyun" title="wangyiyun">
+                    <img src="./枯木_files/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://localhost:4000/*" target="_blank" class="email" title="email">
+                    <img src="./枯木_files/email.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="./枯木_files/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill; min-height: 361px;" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle is-homepage yya sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="http://localhost:4000/">
+            <span class="sakurasono"></span>
+            <span class="shironeko">清晨の雨天</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="http://localhost:4000/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  " aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="http://localhost:4000/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  " aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  " aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="http://localhost:4000/tags/%E6%82%A6%E8%AF%BB/">
+                          <i class="fa " aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="http://localhost:4000/bangumi/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  " aria-hidden="true"></i>
+                    书单
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="http://localhost:4000/music/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  " aria-hidden="true"></i>
+                    歌单
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="http://localhost:4000/diary/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  " aria-hidden="true"></i>
+                    说说
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="http://localhost:4000/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  " aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="blank" style="padding-top: 0px;"></div>
+<div id="content" class="site-content">
+  
+  <div class="notice" style="margin-top:60px">
+    <i class="iconfont icon-notification">
+    </i>
+    <marquee align="middle" behavior="scroll" loop="-1" scrollamount="6" style="margin: 0 8px 0 20px; display: block;" onmouseout="this.start()" onmouseover="this.stop()">
+      <div class="notice-content">当你的才华还撑不起你的野心的时候， 你就应该静下心来学习; 当你的能力还驾驭不了你的目标时， 就应该沉下心来，历练。 梦想，不是浮躁，而是沉淀和积累，只有拼出来的美丽，没有等出来的辉煌!</div>
+		</marquee>
+  </div>
+  
+  <div class="top-feature-row">
+  <h1 class="fes-title" style="font-family: &#39;Ubuntu&#39;, sans-serif;">
+  <i class="fa fa-anchor" aria-hidden="true">
+  </i>
+  真不错</h1>
+  
+</div>
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <h1 class="main-title" style="font-family: &#39;Ubuntu&#39;, sans-serif;">
+      <i class="fa fa-envira" aria-hidden="true"></i>
+      文章</h1>
+      
+  <!-- 首页默认取最最新文章集 -->
+  
+    
+<article class="post post-list-thumb post-list-thumb-left post-list-show" itemscope="" itemtype="https://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="http://localhost:4000/2020/09/30/Server/">
+      <img class="lazyload" onerror="imgError(this,3)" src="./枯木_files/image-404.png" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2020-9-30 00:09</div>
+      <a href="http://localhost:4000/2020/09/30/Server/" class="post-title">
+        <h3>Server</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+            <a href="http://localhost:4000/tags/Web/">Web<em>·</em></a>
+          
+            <a href="http://localhost:4000/tags/%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0/">学习日记<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p></p>
+        <div class="post-bottom">
+          <a href="http://localhost:4000/2020/09/30/Server/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+
+
+    </main>
+      <!-- 首页默认取最最新文章集 -->
+    <!--  -->
+  </div>
+  
+</div>
+
+
+    </div>    
+    
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 清晨的雨天<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="./枯木_files/wordpress-rotating-ball-o.svg">
+        <img src="./枯木_files/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">Copyright© 2020 | by Zzg</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: &#39;Ubuntu&#39;, sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&amp;<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="./枯木_files/lib.min.js.下载"></script>
+<script src="./枯木_files/clipboard.min.js.下载"></script>
+<script type="text/javascript" src="./枯木_files/InsightSearch.js.下载"></script>
+<script type="text/javascript" src="./枯木_files/jquery.fancybox.min.js.下载"></script>
+<script type="text/javascript" src="./枯木_files/zoom.min.js.下载"></script>
+<script type="text/javascript" src="./枯木_files/sakura-app.js.下载"></script>
+<script src="./枯木_files/av-min.js.下载"></script>
+<script src="./枯木_files/Valine.min.js.下载"></script>
+<script src="./枯木_files/botui.js.下载"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="./枯木_files/busuanzi.pure.mini.js.下载"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section><canvas width="1290" height="361" style="position: fixed; top: 0px; left: 0px; pointer-events: none; z-index: 999999;"></canvas><div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"><section class="ins-section"><header class="ins-section-header">文章</header><div class="ins-selectable ins-search-item" data-url="/2020/09/30/Server/"><header><i class="fa fa-file"></i>Server</header><p class="ins-search-preview">1. 软件工程 程序设计 Ada - bug - debug 软件设计 IBM - Dos - Microsoft - Bill Gates - Windows 软件工程 给定成本、进度的前提下，开发出具有有效性，可维护，可追踪，可复用，可移植的软件产品。 2. 软件的生命周期(软件开发流程)俗称 </p></div></section><section class="ins-section"><header class="ins-section-header">分类</header><div class="ins-selectable ins-search-item" data-url="/categories/技术/"><header><i class="fa fa-folder"></i>技术<span class="ins-slug">技术</span></header></div></section><section class="ins-section"><header class="ins-section-header">标签</header><div class="ins-selectable ins-search-item" data-url="/tags/Web/"><header><i class="fa fa-tag"></i>Web<span class="ins-slug">Web</span></header></div><div class="ins-selectable ins-search-item" data-url="/tags/学习日记/"><header><i class="fa fa-tag"></i>学习日记<span class="ins-slug">学习日记</span></header></div></section></div>
+        </div>
+    </div>
+</div>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="./枯木_files/touxiang.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: &#39;Ubuntu&#39;, sans-serif; letter-spacing: 1.5px">清晨の雨天</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/honjun" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://weibo.com/mashirozx?is_all=1" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="http://localhost:4000/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  " aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="http://localhost:4000/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  " aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="http://localhost:4000/categories/%E6%8A%80%E6%9C%AF/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  " aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="http://localhost:4000/tags/%E6%82%A6%E8%AF%BB/">
+                  <i class="fa " aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="http://localhost:4000/bangumi/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  " aria-hidden="true"></i>
+            书单
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="http://localhost:4000/music/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  " aria-hidden="true"></i>
+            歌单
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="http://localhost:4000/diary/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  " aria-hidden="true"></i>
+            说说
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="http://localhost:4000/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  " aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">© 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="./枯木_files/APlayer.min.css">
+<script src="./枯木_files/APlayer.min.js.下载"></script>
+<!-- require MetingJS -->
+<script src="./枯木_files/Meting.min.js.下载"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js id="2660651585" server="netease" type="playlist" fixed="true" autoplay="false" loop="all" order="random" preload="auto" volume="0.7" mutex="true" <="" meting-js="">
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+<script src="./枯木_files/L2Dwidget.min.js.下载"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
+<div class="aplayer aplayer-withlist aplayer-fixed aplayer-narrow">
+<div class="aplayer-list aplayer-list-hide" style="max-height: 250px">
+    <ol style="max-height: 250px">
+        
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">1</span>
+    <span class="aplayer-list-title">Bff 'best Friends Forever'</span>
+    <span class="aplayer-list-author">Natalia</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">2</span>
+    <span class="aplayer-list-title">Because of You</span>
+    <span class="aplayer-list-author">The Piano Guys</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">3</span>
+    <span class="aplayer-list-title">十年</span>
+    <span class="aplayer-list-author">K. Williams</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">4</span>
+    <span class="aplayer-list-title">Blue</span>
+    <span class="aplayer-list-author">BIGBANG</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">5</span>
+    <span class="aplayer-list-title">Firework</span>
+    <span class="aplayer-list-author">Katy Perry</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">6</span>
+    <span class="aplayer-list-title">君が好きだと叫びたい</span>
+    <span class="aplayer-list-author">BAAD</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">7</span>
+    <span class="aplayer-list-title">Sakura Tears</span>
+    <span class="aplayer-list-author">Snigellin</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">8</span>
+    <span class="aplayer-list-title">Baby I Love You</span>
+    <span class="aplayer-list-author">Tiffany Alvord</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">9</span>
+    <span class="aplayer-list-title">secret base ~君がくれたもの~ (10 years after Ver.)</span>
+    <span class="aplayer-list-author">茅野愛衣 / 戸松遥 / 早見沙織</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">10</span>
+    <span class="aplayer-list-title">I Really Like You</span>
+    <span class="aplayer-list-author">Carly Rae Jepsen</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">11</span>
+    <span class="aplayer-list-title">心做し（Cover GUMI）</span>
+    <span class="aplayer-list-author">双笙</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">12</span>
+    <span class="aplayer-list-title">鸟之诗 (八音盒版)</span>
+    <span class="aplayer-list-author">V.A.</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">13</span>
+    <span class="aplayer-list-title">カノン</span>
+    <span class="aplayer-list-author">DJ Okawari</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">14</span>
+    <span class="aplayer-list-title">YOUTH</span>
+    <span class="aplayer-list-author">Troye Sivan</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">15</span>
+    <span class="aplayer-list-title">光るなら</span>
+    <span class="aplayer-list-author">Goose house</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">16</span>
+    <span class="aplayer-list-title">If I Die Young</span>
+    <span class="aplayer-list-author">The Band Perry</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">17</span>
+    <span class="aplayer-list-title">Take me hand</span>
+    <span class="aplayer-list-author">DAISHI DANCE / Cecile Corbel</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">18</span>
+    <span class="aplayer-list-title">Maps</span>
+    <span class="aplayer-list-author">MADILYN</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">19</span>
+    <span class="aplayer-list-title">夜、萤火虫和你</span>
+    <span class="aplayer-list-author">AniFace</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">20</span>
+    <span class="aplayer-list-title">Enemy</span>
+    <span class="aplayer-list-author">Jennifer March</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">21</span>
+    <span class="aplayer-list-title">As Long As You Love Me</span>
+    <span class="aplayer-list-author">Justin Bieber / Big Sean</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">22</span>
+    <span class="aplayer-list-title">It's Your&nbsp;Birthday&nbsp;</span>
+    <span class="aplayer-list-author">鹰王</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">23</span>
+    <span class="aplayer-list-title">春よ、来い</span>
+    <span class="aplayer-list-author">松任谷由実</span>
+</li>
+
+<li class="aplayer-list-light">
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">24</span>
+    <span class="aplayer-list-title">Hall of Fame</span>
+    <span class="aplayer-list-author">The Script / will.i.am</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">25</span>
+    <span class="aplayer-list-title">Shape of You</span>
+    <span class="aplayer-list-author">J.Fla</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">26</span>
+    <span class="aplayer-list-title">Lupinus</span>
+    <span class="aplayer-list-author">Foxtail-Grass Studio</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">27</span>
+    <span class="aplayer-list-title">That Girl</span>
+    <span class="aplayer-list-author">Olly Murs</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">28</span>
+    <span class="aplayer-list-title">Departures ~あなたにおくるアイの歌~</span>
+    <span class="aplayer-list-author">EGOIST</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">29</span>
+    <span class="aplayer-list-title">あなただけ見つめてる</span>
+    <span class="aplayer-list-author">大黒摩季</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">30</span>
+    <span class="aplayer-list-title">カラフル。</span>
+    <span class="aplayer-list-author">沢井美空</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">31</span>
+    <span class="aplayer-list-title">ブルーバード</span>
+    <span class="aplayer-list-author">いきものがかり</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">32</span>
+    <span class="aplayer-list-title">Masquerade</span>
+    <span class="aplayer-list-author">黒石ひとみ</span>
+</li>
+
+<li class="">
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">33</span>
+    <span class="aplayer-list-title">アイロニ</span>
+    <span class="aplayer-list-author">majiko</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">34</span>
+    <span class="aplayer-list-title">かくしん的☆めたまるふぉ～ぜっ!</span>
+    <span class="aplayer-list-author">田中あいみ</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">35</span>
+    <span class="aplayer-list-title">Fwio</span>
+    <span class="aplayer-list-author">Saiakoup</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">36</span>
+    <span class="aplayer-list-title">打上花火</span>
+    <span class="aplayer-list-author">DAOKO / 米津玄師</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">37</span>
+    <span class="aplayer-list-title">Don't Wanna Know/We Don't Talk Anymore</span>
+    <span class="aplayer-list-author">Sam Tsui / Alex Blue</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">38</span>
+    <span class="aplayer-list-title">Because of You</span>
+    <span class="aplayer-list-author">Josh Vietti</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">39</span>
+    <span class="aplayer-list-title">夏恋</span>
+    <span class="aplayer-list-author">Otokaze</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">40</span>
+    <span class="aplayer-list-title">儿时的夏日</span>
+    <span class="aplayer-list-author">余日秋山</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">41</span>
+    <span class="aplayer-list-title">Azure</span>
+    <span class="aplayer-list-author">Saiakoup</span>
+</li>
+
+<li>
+    <span class="aplayer-list-cur" style="background-color: #b7daff;"></span>
+    <span class="aplayer-list-index">42</span>
+    <span class="aplayer-list-title">SAKURA</span>
+    <span class="aplayer-list-author">邱有句</span>
+</li>
+
+    </ol>
+</div>
+<div class="aplayer-body" style="width: 400px;">
+    <div class="aplayer-pic" style="background-image: url(&quot;https://api.i-meto.com/meting/api?server=netease&amp;type=pic&amp;id=18302470556512603&amp;auth=4ed026a60af1b0f0cbd1075b8b6afb4c527612b9&quot;); background-color: rgb(183, 218, 255);">
+        <div class="aplayer-button aplayer-play"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 31"><path d="M15.552 15.168q0.448 0.32 0.448 0.832 0 0.448-0.448 0.768l-13.696 8.512q-0.768 0.512-1.312 0.192t-0.544-1.28v-16.448q0-0.96 0.544-1.28t1.312 0.192z"></path></svg></div>
+    </div>
+    <div class="aplayer-info" style="display: block;">
+        <div class="aplayer-music">
+            <span class="aplayer-title">Hall of Fame</span>
+            <span class="aplayer-author"> - The Script / will.i.am</span>
+        </div>
+        <div class="aplayer-controller">
+            <div class="aplayer-bar-wrap">
+                <div class="aplayer-bar">
+                    <div class="aplayer-loaded" style="width: 100%;"></div>
+                    <div class="aplayer-played" style="width: 0; background: #b7daff;">
+                        <span class="aplayer-thumb" style="background: #b7daff;">
+                            <span class="aplayer-loading-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M4 16c0-6.6 5.4-12 12-12s12 5.4 12 12c0 1.2-0.8 2-2 2s-2-0.8-2-2c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8c1.2 0 2 0.8 2 2s-0.8 2-2 2c-6.6 0-12-5.4-12-12z"></path></svg></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="aplayer-time aplayer-time-narrow">
+                <span class="aplayer-time-inner">
+                    <span class="aplayer-ptime">00:00</span> / <span class="aplayer-dtime">03:22</span>
+                </span>
+                <span class="aplayer-icon aplayer-icon-back">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M25.468 6.947c-0.326-0.172-0.724-0.151-1.030 0.057l-6.438 4.38v-3.553c0-0.371-0.205-0.71-0.532-0.884-0.326-0.172-0.724-0.151-1.030 0.057l-12 8.164c-0.274 0.186-0.438 0.496-0.438 0.827s0.164 0.641 0.438 0.827l12 8.168c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-3.556l6.438 4.382c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-16.333c0-0.371-0.205-0.71-0.532-0.884z"></path></svg>
+                </span>
+                <span class="aplayer-icon aplayer-icon-play">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 31"><path d="M15.552 15.168q0.448 0.32 0.448 0.832 0 0.448-0.448 0.768l-13.696 8.512q-0.768 0.512-1.312 0.192t-0.544-1.28v-16.448q0-0.96 0.544-1.28t1.312 0.192z"></path></svg>
+                </span>
+                <span class="aplayer-icon aplayer-icon-forward">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M25.468 6.947c-0.326-0.172-0.724-0.151-1.030 0.057l-6.438 4.38v-3.553c0-0.371-0.205-0.71-0.532-0.884-0.326-0.172-0.724-0.151-1.030 0.057l-12 8.164c-0.274 0.186-0.438 0.496-0.438 0.827s0.164 0.641 0.438 0.827l12 8.168c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-3.556l6.438 4.382c0.169 0.115 0.365 0.174 0.562 0.174 0.16 0 0.321-0.038 0.468-0.116 0.327-0.173 0.532-0.514 0.532-0.884v-16.333c0-0.371-0.205-0.71-0.532-0.884z"></path></svg>
+                </span>
+                <div class="aplayer-volume-wrap">
+                    <button type="button" class="aplayer-icon aplayer-icon-volume-down"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28 32"><path d="M13.728 6.272v19.456q0 0.448-0.352 0.8t-0.8 0.32-0.8-0.32l-5.952-5.952h-4.672q-0.48 0-0.8-0.352t-0.352-0.8v-6.848q0-0.48 0.352-0.8t0.8-0.352h4.672l5.952-5.952q0.32-0.32 0.8-0.32t0.8 0.32 0.352 0.8zM20.576 16q0 1.344-0.768 2.528t-2.016 1.664q-0.16 0.096-0.448 0.096-0.448 0-0.8-0.32t-0.32-0.832q0-0.384 0.192-0.64t0.544-0.448 0.608-0.384 0.512-0.64 0.192-1.024-0.192-1.024-0.512-0.64-0.608-0.384-0.544-0.448-0.192-0.64q0-0.48 0.32-0.832t0.8-0.32q0.288 0 0.448 0.096 1.248 0.48 2.016 1.664t0.768 2.528z"></path></svg></button>
+                    <div class="aplayer-volume-bar-wrap">
+                        <div class="aplayer-volume-bar">
+                            <div class="aplayer-volume" style="height: 70%; background: rgb(183, 218, 255);"></div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="aplayer-icon aplayer-icon-order">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M22.667 4l7 6-7 6 7 6-7 6v-4h-3.653l-3.76-3.76 2.827-2.827 2.587 2.587h2v-8h-2l-12 12h-6v-4h4.347l12-12h3.653v-4zM2.667 8h6l3.76 3.76-2.827 2.827-2.587-2.587h-4.347v-4z"></path></svg>
+                </button>
+                <button type="button" class="aplayer-icon aplayer-icon-loop">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 29 32"><path d="M9.333 9.333h13.333v4l5.333-5.333-5.333-5.333v4h-16v8h2.667v-5.333zM22.667 22.667h-13.333v-4l-5.333 5.333 5.333 5.333v-4h16v-8h-2.667v5.333z"></path></svg>
+                </button>
+                <button type="button" class="aplayer-icon aplayer-icon-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 22 32"><path d="M20.8 14.4q0.704 0 1.152 0.48t0.448 1.12-0.48 1.12-1.12 0.48h-19.2q-0.64 0-1.12-0.48t-0.48-1.12 0.448-1.12 1.152-0.48h19.2zM1.6 11.2q-0.64 0-1.12-0.48t-0.48-1.12 0.448-1.12 1.152-0.48h19.2q0.704 0 1.152 0.48t0.448 1.12-0.48 1.12-1.12 0.48h-19.2zM20.8 20.8q0.704 0 1.152 0.48t0.448 1.12-0.48 1.12-1.12 0.48h-19.2q-0.64 0-1.12-0.48t-0.48-1.12 0.448-1.12 1.152-0.48h19.2z"></path></svg>
+                </button>
+                <button type="button" class="aplayer-icon aplayer-icon-lrc">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M26.667 5.333h-21.333c-0 0-0.001 0-0.001 0-1.472 0-2.666 1.194-2.666 2.666 0 0 0 0.001 0 0.001v-0 16c0 0 0 0.001 0 0.001 0 1.472 1.194 2.666 2.666 2.666 0 0 0.001 0 0.001 0h21.333c0 0 0.001 0 0.001 0 1.472 0 2.666-1.194 2.666-2.666 0-0 0-0.001 0-0.001v0-16c0-0 0-0.001 0-0.001 0-1.472-1.194-2.666-2.666-2.666-0 0-0.001 0-0.001 0h0zM5.333 16h5.333v2.667h-5.333v-2.667zM18.667 24h-13.333v-2.667h13.333v2.667zM26.667 24h-5.333v-2.667h5.333v2.667zM26.667 18.667h-13.333v-2.667h13.333v2.667z"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="aplayer-notice" style="opacity: 0;">An audio error has occurred, player will skip forward in 2 seconds.</div>
+    <div class="aplayer-miniswitcher"><button class="aplayer-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32"><path d="M22 16l-10.105-10.6-1.895 1.987 8.211 8.613-8.211 8.612 1.895 1.988 8.211-8.613z"></path></svg></button></div>
+</div>
+<div class="aplayer-lrc">
+    <div class="aplayer-lrc-contents" style="transform: translateY(0); -webkit-transform: translateY(0);">
+    <p class="aplayer-lrc-current">作曲 : Daniel O'Donoghue/Mark Sheehan/William Adams/James Barry</p>
+
+    <p>作词 : Daniel O'Donoghue/Mark Sheehan/William Adams/James Barry</p>
+
+    <p>Yeah, you could be the greatest (你会成为最伟大的人)</p>
+
+    <p>You can be the best (你能做到最好)</p>
+
+    <p>You can be the King Kong banging on your chest (你能像金刚一样自信满满的敲打胸脯)</p>
+
+    <p>You could beat the world (你可以征服全世界)</p>
+
+    <p>You could beat the war (能够赢得一切战争)</p>
+
+    <p>You could talk to God, go banging on his door (甚至能够与神对话 去敲打他的门)</p>
+
+    <p>You can throw your hands up (你能自信的举起双手)</p>
+
+    <p>You can beat the clock (你可以与时间抗争)</p>
+
+    <p>You can move a mountain (你有移山之力)</p>
+
+    <p>You can break rocks (你能击碎岩石)</p>
+
+    <p>You can be a master (你可以成为命运主宰)</p>
+
+    <p>Don't wait for luck (无需等待运气垂青)</p>
+
+    <p>Dedicate yourself and you can find yourself (放手一搏后你会恍然发现)</p>
+
+    <p>Standing in the hall of fame (你已身处名人堂之中)</p>
+
+    <p>And the world's gonna know your name (你的英名将会被世界所知晓)</p>
+
+    <p>Cause you burn with the brightest flame (因为你是最耀眼的一道火焰)</p>
+
+    <p>And the world's gonna know your name (你的英名将被世界所铭记)</p>
+
+    <p>And you'll be on the walls of the hall of fame (镌刻在名人堂的墙壁之上)</p>
+
+    <p>You could go the distance (你可以奔向远方)</p>
+
+    <p>You could run the mile (你可以日行千里)</p>
+
+    <p>You could walk straight through hell with a smile (你可以面带微笑直穿地狱)</p>
+
+    <p>You could be the hero (你是英雄)</p>
+
+    <p>You could get the gold (你赢得了金牌)</p>
+
+    <p>Breaking all the records that thought never could be broke (打破那些他们认为绝不可能被打破的记录)</p>
+
+    <p>Do it for your people (为你的家人而战)</p>
+
+    <p>Do it for your pride (为你的骄傲而战)</p>
+
+    <p>Never gonna know if you never even try (试都不试一下怎么会知道自己的能耐)</p>
+
+    <p>Do it for your country (为你的国家而战)</p>
+
+    <p>Do it for you name (为你的英名而战)</p>
+
+    <p>Cause there's gonna be a day (终有一天)</p>
+
+    <p>When your, standing in the hall of fame (你将会 身处名人堂之中)</p>
+
+    <p>And the world's gonna know your name (你的英名将会被世界所知晓)</p>
+
+    <p>Cause you burn with the brightest flame (因为你是最耀眼的一道火焰)</p>
+
+    <p>And the world's gonna know your name (你的英名将被世界所铭记)</p>
+
+    <p>And you'll be on the walls of the hall of fame (镌刻在名人堂的墙壁之上)</p>
+
+    <p>Be a champion (成为冠军吧)</p>
+
+    <p>Be a champion (做个王者吧)</p>
+
+    <p>Be a champion (成为冠军吧)</p>
+
+    <p>Be a champion (做个王者吧)</p>
+
+    <p>On the walls of the hall of fame (镌刻在名人堂的墙壁之上吧)</p>
+
+    <p>Be students,Be teachers Be politicians,Be preachers (无论 学生 老师 政治家 传教士)</p>
+
+    <p>Be believers,Be leaders (信徒 领导者)</p>
+
+    <p>Be astronauts,Be champions,Be true seekers (或是 宇航员 都能成为冠军)</p>
+
+    <p>Be students,Be teachers Be politicians,Be preachers (无论 学生 老师 政治家 传教士)</p>
+
+    <p>Be believers,Be leaders Be astronauts,Be champions (信徒 领导者或是宇航员 都能成为冠军)</p>
+
+    <p>Standing in the hall of fame (你已身处名人堂之中)</p>
+
+    <p>And the world's gonna know your name (你的英名将会被世界所知晓)</p>
+
+    <p>Cause you burn with the brightest flame (因为你是最耀眼的一道火焰)</p>
+
+    <p>And the world's gonna know your name (你的英名将被世界所铭记)</p>
+
+    <p>And you'll be on the walls of the hall of fame (镌刻在名人堂的墙壁之上)</p>
+
+    <p>(will.i.am)Rap</p>
+
+    <p>Standing in the hall of fame. (你已身处名人堂之中)</p>
+</div>
+</div>
+</div></meting-js><div id="live2d-widget" class="live2d-widget-container" style="position: fixed; right: 0px; bottom: -20px; width: 200px; height: 400px; z-index: 99999; opacity: 1; pointer-events: none;"><canvas id="live2dcanvas" width="400" height="800" style="position: absolute; left: 0px; top: 0px; width: 200px; height: 400px;"></canvas></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
